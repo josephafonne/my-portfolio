@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 50px;
+        }
+        #form{
+            border: 2px solid blue;
+            background-color: darkgreen;
+            margin-right: 50%;
+            box-sizing: border-box;
+            padding: 20px;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        #form .submit {
+            padding: 5px 10px;
+            border: 1px solid white;
+            background-color: #1D2936;
+        }
+        #form *{
+            background-color: transparent;
+        }
+        a {
+            color: #019838;
+        }
+    </style>
+</head>
+<body>
+    <img src="profile.png" width="200" id="profilePicture"/>
+    <h1 id="name">Joseph Menye</h1>
+    <h3 id="subtitle">Programmer</h3>
+    <p id="desc">Menye is a programmer who is learning how to <br>
+    create webpages and websites using HTML.</p>
+    <br/>
+    <h2>Bsc. ICT Class members</h2>
+    <table class="classMembers" border="1" width="400">
+        <tr>
+            <th>Name</th>
+            <th>Reg No.</th>
+            <th>Status</th>
+            <th>Gender</th>
+        </tr>
+        <tr>
+            <td>Menye</td>
+            <td>BICT0121</td>
+            <td>Present</td>
+            <td>Male</td>
+        </tr>
+        <tr>
+            <td>Tamanda</td>
+            <td>BICT0321</td>
+            <td>Present</td>
+            <td>Female</td>
+        </tr>
+        <tr>
+            <td>Pheona</td>
+            <td>BICT0421</td>
+            <td>Present</td>
+            <td>Female</td>
+        </tr>
+        <tr>
+            <td>Cosmas</td>
+            <td>BICT0721</td>
+            <td>Present</td>
+            <td>Male</td>
+        </tr>
+        <tr>
+            <td>Monica</td>
+            <td>BICT0921</td>
+            <td>Present</td>
+            <td>Female</td>
+        </tr>
+        <tr>
+            <td>Norah</td>
+            <td>BICT1021</td>
+            <td>Present</td>
+            <td>Female</td>
+        </tr>
+        <tr>
+            <td>Lasmon</td>
+            <td>BICT1121</td>
+            <td>Present</td>
+            <td>Male</td>
+        </tr>
+        <tr>
+            <td>Hilda</td>
+            <td>BICT1221</td>
+            <td>Present</td>
+            <td>Female</td>
+        </tr>
+        <tr>
+            <td>Richard</td>
+            <td>BICT1321</td>
+            <td>Present</td>
+            <td>Male</td>
+        </tr>
+        <tr>
+            <td>Chris</td>
+            <td>BICT1421</td>
+            <td>Present</td>
+            <td>Male</td>
+        </tr>
+        <tr>
+            <td>George</td>
+            <td>BICT1621</td>
+            <td colspan="2">Withdrawn</td>
+        </tr>
+        <tr>
+            <td>Dalitso</td>
+            <td>BICT1821</td>
+            <td>Present</td>
+            <td>Female</td>
+        </tr>
+        <tr>
+            <td>Tozgani</td>
+            <td>BICT1921</td>
+            <td>Present</td>
+            <td>Female</td>
+        </tr>
+        <tr>
+            <td>Joshua</td>
+            <td>BICT2221</td>
+            <td>Present</td>
+            <td>Male</td>
+        </tr>
+        <tr>
+            <td>Joseph</td>
+            <td>BICT2421</td>
+            <td>Present</td>
+            <td>Male</td>
+        </tr>
+        <tr>
+            <td>Chifundo</td>
+            <td>BICT2521</td>
+            <td>Present</td>
+            <td>Male</td>
+        </tr>
+        <tr>
+            <td>Tadala</td>
+            <td>BICT2721</td>
+            <td>Present</td>
+            <td>Female</td>
+        </tr>
+        <tr>
+            <td>Regina</td>
+            <td>BICT2821</td>
+            <td>Present</td>
+            <td>Female</td>
+        </tr>
+        <tr>
+            <td>Taonga</td>
+            <td>BICT3021</td>
+            <td>Present</td>
+            <td>Female</td>
+        </tr>
+        <tr>
+            <td>Hazel</td>
+            <td>BICT3121</td>
+            <td>Present</td>
+            <td>Female</td>
+        </tr>
+        <tr>
+            <td>Imran Yusuf</td>
+            <td>BICT3221</td>
+            <td>Present</td>
+            <td>Male</td>
+        </tr>
+        <tr>
+            <td>Yamikani</td>
+            <td>BICT3321</td>
+            <td>Present</td>
+            <td>Male</td>
+        </tr>
+        <tr>
+            <td>Gift</td>
+            <td>BICT3521</td>
+            <td>Present</td>
+            <td>Male</td>
+        </tr>
+        <tr>
+            <td>Gift</td>
+            <td>BICT2020</td>
+            <td>Present</td>
+            <td>Male</td>
+        </tr>
+        <tr>
+            <td>Aisha</td>
+            <td>BICT2320</td>
+            <td>Present</td>
+            <td>Female</td>
+        </tr>
+    </table>
+
+
+    <br>
+    <h1>Sample form</h1>
+    <form method="get" id="form">
+        <p>Select your gender: </p>
+        <input type="radio" name="gender_m" id="Male">
+        <label for="gender_m">Male</label><br>
+        <input type="radio" name="gender_f" id="Female">
+        <label for="gender_f">Female</label><br>
+        <br>
+        <label for="name">Full Name</label>
+        <input type="text" name="name" id="fullname"><br>
+        <br>
+        <input type="submit" value="Submit" class="submit">
+    </form>
+
+    <br>
+    <hr>
+    <p>For Mr. L. Ndebvu. The 'b' is there, preserving my marks 😅</p>
+    <p>Link to a random youtube channel: <a href="https://youtube.com/@menyepy">Menye Programming</a></p>
+</body>
+</html>
