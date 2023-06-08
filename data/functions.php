@@ -27,7 +27,7 @@ function getProjects(){
         <img src="assets/images/' . $row["image-link"] .'" alt="Avatar" style="width:100%">
         <div class="container">
             <h4><b>' . $row["name"] .'</b></h4>
-            <p>' . substr($row["description"], 0, 100) . "..." .'</p>
+            <p>' . substr($row["description"], 0, 220) . "..." .'</p>
         </div>
     </div>';
        }
