@@ -26,7 +26,7 @@ $page = "projects";
     <div class="hero-about">
         <div class="hero-text">
             <h1 class="splash">Projects</h1><br>
-            <p>Application of the skills and proof of work.</p><br>
+            <p>Demonstration of my skills.</p><br>
         </div>
     </div><br><hr>
 

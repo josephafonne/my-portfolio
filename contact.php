@@ -1,3 +1,11 @@
+<?php 
+
+include("data/functions.php");
+
+$page = "contact"; 
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,46 +18,44 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/icon.png" />
-    <title>Joseph Menye Afonne | Contact Page</title>
+    <title>Joseph Menye Afonne | Developer</title>
 </head>
 <body>
-    <header>
-    <!-- Navbar -->
-    <img src="assets/images/logo.png" alt="Menye" class="logo">
-        <nav>
-            <ul class="navigation">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="skills.html" class="nav-link">Skills</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-            </ul>
-        </nav>
-        <a class="c2a" id="contactbtn" onclick="showContactInfo()"><button>Contact</button></a>
-    </header>
+    <?php include('assets/includes/navbar.php') ?>
 
     <!-- Main Section -->
-    <hr>
-    <div class="contactmain">
-        <h1>Contact</h1><br>
-        <form method="post">
+    <div class="hero-about">
+        <div class="hero-text">
+            <h1 class="splash">Send a message!</h1><br>
+        </div>
+    </div><br><hr>
+
+    <!-- Main article -->
+    <div class="contact">
+    <h1>Contact</h1><br><br>
+        <form method="post" class="contactForm" action="contact.php">
             <label for="name">Full name: </label>
-            <input type="text" name="name" class="forminput" placeholder="John Doe"><br><br>
+            <input type="text" name="name" class="forminput" placeholder="Your name here"><br><br>
 
             <label for="email">E-mail: </label>
-            <input type="email" name="email" class="forminput" placeholder="johndoe@example.com"><br><br>
+            <input type="email" name="email" class="forminput" placeholder="username@example.com" maxlength="255"><br><br>
+
+            <label for="subject">Subject: </label>
+            <input type="text" name="subject" class="forminput" placeholder="Message subject" maxlength="100"><br><br>
 
             <label for="message">Message: </label>
-            <textarea id="msg" name="message" placeholder="Write something.." class="forminput"></textarea><br>
+            <textarea id="msg" name="message" placeholder="Write something... (You can increase the height of this field)" class="forminput" maxlength="5000"></textarea><br>
             <br>
 
-            <input type="submit" value="Submit" class="button">
+            <input type="submit" value="Submit" class="button" name="submit">
         </form>
-    </div>
-
+</div>
+    
     <!-- Footer Section -->
     <footer>
+        <br>
         <p class="footer-text">&copy; Menye 2023.</p>
-    </footer>   
+    </footer>
 
     <!-- Website scripts -->
     <script src="assets/js/app.js"></script>

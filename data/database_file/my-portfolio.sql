@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 08, 2023 at 09:13 AM
+-- Generation Time: Jun 14, 2023 at 01:08 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -20,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `my-portfolio`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact`
+--
+
+CREATE TABLE `contact` (
+  `id` int(11) NOT NULL,
+  `name` text NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `subject` varchar(100) NOT NULL,
+  `message` varchar(5000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`id`, `name`, `email`, `subject`, `message`) VALUES
+(1, 'Menye', 'menyeyt@gmail.com', 'Hello world!', 'This is a test message!');
 
 -- --------------------------------------------------------
 
@@ -41,7 +62,7 @@ CREATE TABLE `projects` (
 INSERT INTO `projects` (`id`, `name`, `image-link`, `description`) VALUES
 (1, '<a href=\"https://github.com/menyepy\" target=\"blank\">GitHub Profile</a>', '1.png', 'In my Github profile, you\'ll find a diverse range of projects, including Java programs, Python projects, web development projects (HTML, CSS, JavaScript), web programming projects (PHP, MySQL), and perhaps some miscellaneous projects developed in Lua.'),
 (2, 'Video Production Project', '2.png', 'I collaborated with my classmates to create a captivating video project centered around showcasing the aspects we appreciate about Mzuzu University. Additionally, I occasionally develop content for social media platforms, combining my video production skills with creative storytelling.'),
-(3, 'C & Java Programs', '0.png', 'Within my repertoire, I have crafted a collection of foundational C scripting programs, as well as Java programs that span from basic implementations to intricate graphical user interface (GUI) applications.');
+(3, 'C & Java Programs', '3.png', 'Within my repertoire, I have crafted a collection of foundational C scripting programs, as well as Java programs that span from basic implementations to intricate graphical user interface (GUI) applications.');
 
 -- --------------------------------------------------------
 
@@ -72,6 +93,12 @@ INSERT INTO `skills` (`id`, `name`, `description`, `projects`) VALUES
 --
 
 --
+-- Indexes for table `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `projects`
 --
 ALTER TABLE `projects`
@@ -88,16 +115,22 @@ ALTER TABLE `skills`
 --
 
 --
+-- AUTO_INCREMENT for table `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `projects`
 --
 ALTER TABLE `projects`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `skills`
 --
 ALTER TABLE `skills`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

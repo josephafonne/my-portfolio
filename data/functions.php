@@ -2,6 +2,12 @@
 
 require("conn.php");
 
+function getMessages(){
+    if (isset($_COOKIE['message'])){
+        echo ('<script>alert("' . $_COOKIE["message"] . '");</script>');
+    }   
+}
+
 function getSkills(){
     global $conn;
     $query = "SELECT * FROM skills";
@@ -33,6 +39,23 @@ function getProjects(){
        }
     } else {
         //Failure
+    }
+}
+
+if(isset($_POST['submit'])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+
+    $query = "INSERT INTO contact(name, email, subject, message) VALUES ('$name', '$email', '$subject', '$message')";
+    $sql = mysqli_query($conn, $query);
+
+    if ($sql){
+        setcookie('message', "Your message was sent successfully.", time() + 3);
+        header ('location: index.php');
+    } else {
+        echo "Message not sent. Details: " . mysqli_error($conn); 
     }
 }
 

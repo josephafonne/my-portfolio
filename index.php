@@ -1,4 +1,6 @@
-<?php $page = "home"; ?>
+<?php $page = "home"; 
+include ('data/functions.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +14,8 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/icon.png" />
     <title>Joseph Menye Afonne | Developer</title>
+
+    <?php getMessages(); ?>
 </head>
 <body>
 <?php include('assets/includes/navbar.php') ?>
@@ -20,7 +24,7 @@
         <div class="hero-text">
             <h1 class="splash">Joseph Menye</h1><br>
             <p>Full Stack Developer & Programmer</p><br>
-            <a href="skills.html"><button>See more</button><br></a>
+            <a href="skills.php"><button>View Skills</button><br></a>
         </div>
     </div>
     
